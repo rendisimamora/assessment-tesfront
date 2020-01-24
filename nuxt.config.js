@@ -31,7 +31,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["@/plugins/axios", "@/plugins/api"],
+  plugins: ["@/plugins/axios", "@/plugins/api", "@/plugins/global"],
   /*
    ** Nuxt.js dev-modules
    */
