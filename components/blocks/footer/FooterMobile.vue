@@ -5,62 +5,46 @@
         <!-- Navbar -->
         <ul class="footer-nav d-flex justify-center pl-0 ma-1">
           <li class="footer-nav-item">
-            <a
-              href="#"
-              class="body-2 black--text text-none font-weight-bold pa-2"
+            <a href="#" class="black--text text-none font-weight-bold pa-2"
               >About Us
             </a>
           </li>
           <li class="footer-nav-item">
-            <a
-              href="#"
-              class="body-2 black--text text-none font-weight-bold pa-2"
+            <a href="#" class="black--text text-none font-weight-bold pa-2"
               >Feedback
             </a>
           </li>
           <li class="footer-nav-item">
-            <a
-              href="#"
-              class="body-2 black--text text-none font-weight-bold pa-2"
+            <a href="#" class="black--text text-none font-weight-bold pa-2"
               >Contact
             </a>
           </li>
         </ul>
         <ul class="footer-nav d-flex justify-center pl-0 ma-1">
           <li class="footer-nav-item">
-            <a
-              href="#"
-              class="body-2 black--text text-none font-weight-bold pa-2"
+            <a href="#" class="black--text text-none font-weight-bold pa-2"
               >Terms & Conditions</a
             >
           </li>
           <li class="footer-nav-item">
-            <a
-              href="#"
-              class="body-2 black--text text-none font-weight-bold pa-2"
+            <a href="#" class="black--text text-none font-weight-bold pa-2"
               >Privacy Policy</a
             >
           </li>
           <li class="footer-nav-item">
-            <a
-              href="#"
-              class="body-2 black--text text-none font-weight-bold pa-2"
+            <a href="#" class="black--text text-none font-weight-bold pa-2"
               >Help</a
             >
           </li>
         </ul>
         <ul class="footer-nav d-flex justify-center pl-0 ma-1">
           <li class="footer-nav-item">
-            <a
-              href="#"
-              class="body-2 black--text text-none font-weight-bold pa-2"
+            <a href="#" class="black--text text-none font-weight-bold pa-2"
               >Awards</a
             >
           </li>
           <li class="footer-nav-item">
-            <a
-              href="#"
-              class="body-2 black--text text-none font-weight-bold pa-2"
+            <a href="#" class="black--text text-none font-weight-bold pa-2"
               >Newsletter</a
             >
           </li>
@@ -68,7 +52,7 @@
         <!-- End Nav -->
 
         <!-- Download app -->
-        <p class="body-2 primary--text my-4">
+        <p class="primary--text text my-4">
           Download Our Mobile App
         </p>
         <div class="d-flex justify-center">
@@ -91,7 +75,7 @@
             src="https://femaledaily.com/static/images/logo_FD.png"
             alt="Female Daily Network"
           />
-          <p class="body-2 my-3">
+          <p class="text text my-3">
             Copyright © 2015 - 2020 Female Daily Network ∙ All the rights
             reserved
           </p>
@@ -140,6 +124,7 @@ $color-grey: #e0e0e0;
   }
   &-nav {
     &-item {
+      font-size: 12px;
       display: block;
       margin-bottom: 10px;
     }
@@ -151,5 +136,9 @@ $color-grey: #e0e0e0;
     width: 150px;
     object-fit: cover;
   }
+}
+
+.text {
+  font-size: 12px;
 }
 </style>

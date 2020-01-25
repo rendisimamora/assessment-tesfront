@@ -5,17 +5,17 @@
         <v-flex xs12 md3>
           <ul class="footer-nav">
             <li class="footer-nav-item">
-              <a href="#" class="body-1 black--text text-none font-weight-bold"
+              <a href="#" class="black--text text-none font-weight-bold"
                 >About Us
               </a>
             </li>
             <li class="footer-nav-item">
-              <a href="#" class="body-1 black--text text-none font-weight-bold"
+              <a href="#" class="black--text text-none font-weight-bold"
                 >Feedback
               </a>
             </li>
             <li class="footer-nav-item">
-              <a href="#" class="body-1 black--text text-none font-weight-bold"
+              <a href="#" class="black--text text-none font-weight-bold"
                 >Contact
               </a>
             </li>
@@ -24,17 +24,17 @@
         <v-flex xs12 md3>
           <ul class="footer-nav">
             <li class="footer-nav-item">
-              <a href="#" class="body-1 black--text text-none font-weight-bold"
+              <a href="#" class="black--text text-none font-weight-bold"
                 >Terms & Conditions</a
               >
             </li>
             <li class="footer-nav-item">
-              <a href="#" class="body-1 black--text text-none font-weight-bold"
+              <a href="#" class="black--text text-none font-weight-bold"
                 >Privacy Policy</a
               >
             </li>
             <li class="footer-nav-item">
-              <a href="#" class="body-1 black--text text-none font-weight-bold"
+              <a href="#" class="black--text text-none font-weight-bold"
                 >Help</a
               >
             </li>
@@ -43,19 +43,19 @@
         <v-flex xs12 md3>
           <ul class="footer-nav">
             <li class="footer-nav-item">
-              <a href="#" class="body-1 black--text text-none font-weight-bold"
+              <a href="#" class="black--text text-none font-weight-bold"
                 >Awards</a
               >
             </li>
             <li class="footer-nav-item">
-              <a href="#" class="body-1 black--text text-none font-weight-bold"
+              <a href="#" class="black--text text-none font-weight-bold"
                 >Newsletter</a
               >
             </li>
           </ul>
         </v-flex>
         <v-flex xs12 md3>
-          <p class="body-1 font-weight-bold primary--text">
+          <p class="font-weight-bold primary--text">
             Download Our Mobile App
           </p>
           <!--<div class="d-flex justify-space between">
@@ -87,7 +87,7 @@
             src="https://femaledaily.com/static/images/logo_FD.png"
             alt="Female Daily Network"
           />
-          <p class="body-1 my-3">
+          <p class="font-montserrat my-3">
             Copyright © 2015 - 2020 Female Daily Network ∙ All the rights
             reserved
           </p>
