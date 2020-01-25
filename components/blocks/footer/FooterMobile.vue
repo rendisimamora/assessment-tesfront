@@ -71,10 +71,9 @@
 
         <!-- Footer Logo -->
         <div class="footer__logo my-5">
-          <img
-            src="https://femaledaily.com/static/images/logo_FD.png"
-            alt="Female Daily Network"
-          />
+          <div class="footer__logo">
+            <Logo />
+          </div>
           <p class="text text my-3">
             Copyright © 2015 - 2020 Female Daily Network ∙ All the rights
             reserved
@@ -128,6 +127,9 @@ $color-grey: #e0e0e0;
       display: block;
       margin-bottom: 10px;
     }
+  }
+  &__logo {
+    width: 150px;
   }
 }
 
