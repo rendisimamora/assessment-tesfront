@@ -14,6 +14,7 @@
       <SectionArticles :items="items.articles" />
       <SectionPopular />
       <SectionVideo />
+      <SectionTrending :items="items.reviews" />
       <SectionBrands />
     </v-container>
   </div>
@@ -26,6 +27,7 @@ import SectionReviews from "@/components/blocks/SectionReviews";
 import SectionArticles from "@/components/blocks/SectionArticles";
 import SectionPopular from "@/components/blocks/SectionPopular";
 import SectionVideo from "@/components/blocks/SectionVideo";
+import SectionTrending from "@/components/blocks/SectionTrending";
 import SectionBrands from "@/components/blocks/SectionBrands";
 export default {
   async asyncData({ app }) {
@@ -48,6 +50,7 @@ export default {
     SectionArticles,
     SectionPopular,
     SectionVideo,
+    SectionTrending,
     SectionBrands
   },
 
