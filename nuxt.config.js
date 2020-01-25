@@ -42,7 +42,12 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["@/plugins/axios", "@/plugins/api", "@/plugins/global"],
+  plugins: [
+    { src: "@/plugins/flickity", ssr: false },
+    "@/plugins/axios",
+    "@/plugins/api",
+    "@/plugins/global"
+  ],
   /*
    ** Nuxt.js dev-modules
    */

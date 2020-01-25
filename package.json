@@ -15,7 +15,8 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.9.3",
     "@nuxtjs/dotenv": "^1.4.1",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-flickity": "^1.2.1"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0",
