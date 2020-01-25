@@ -41,11 +41,11 @@
         </v-flex>
       </v-layout>
     </div>
-    <div class="section-mobile">
+    <div class="section-mobile pb-5">
       <flickity ref="flickity" :options="flickityOptions">
         <iframe
           width="100%"
-          height="400"
+          height="200"
           src="https://www.youtube.com/embed/gThsRmIr524"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -54,7 +54,7 @@
 
         <iframe
           width="100%"
-          height="400"
+          height="200"
           src="https://www.youtube.com/embed/X7rWF-q0Ci4"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -62,7 +62,7 @@
         ></iframe>
         <iframe
           width="100%"
-          height="400"
+          height="200"
           src="https://www.youtube.com/embed/a9RA5r22Gsc"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

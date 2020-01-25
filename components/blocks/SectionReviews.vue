@@ -13,7 +13,7 @@
         </a>
       </div>
 
-      <flickity ref="flickity" :options="flickityOptions">
+      <flickity class="flickity" ref="flickity" :options="flickityOptions">
         <CardReviews
           v-for="(item, i) in items"
           :key="i"
@@ -33,18 +33,18 @@
 <script>
 export default {
   props: {
-    items: {
-      type: Array
-    }
+    items: Array
   },
 
   data() {
     return {
       flickityOptions: {
+        freeScroll: true,
+        groupCells: true,
         contain: true,
         prevNextButtons: false,
         pageDots: true,
-        wrapAround: true,
+        groupCells: 1,
         fullscreen: true
       }
     };
