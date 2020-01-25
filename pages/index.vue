@@ -3,6 +3,7 @@
     <TopFrame />
     <BillboardFrame />
 
+    <SectionEditor :items="items.editors" />
     <SectionInfo />
 
     <HorizontalFrame />
@@ -17,8 +18,9 @@
 </template>
 
 <script>
-import SectionArticles from "@/components/blocks/SectionArticles";
+import SectionEditor from "@/components/blocks/SectionEditor";
 import SectionInfo from "@/components/blocks/SectionInfo";
+import SectionArticles from "@/components/blocks/SectionArticles";
 import SectionPopular from "@/components/blocks/SectionPopular";
 import SectionVideo from "@/components/blocks/SectionVideo";
 import SectionBrands from "@/components/blocks/SectionBrands";
@@ -26,6 +28,7 @@ export default {
   async asyncData({ app }) {
     let res = await app.$api.fdn.get();
     let items = {
+      editors: res["editor's choice"],
       articles: res["latest articles"]
     };
 
@@ -35,8 +38,9 @@ export default {
   },
 
   components: {
-    SectionArticles,
+    SectionEditor,
     SectionInfo,
+    SectionArticles,
     SectionPopular,
     SectionVideo,
     SectionBrands
