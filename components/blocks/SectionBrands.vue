@@ -3,7 +3,7 @@
     <div class="my-5">
       <H2 title="Top Brands" />
       <div class="mb-3 d-flex justify-space-between">
-        <p class="subheading mb-0 secondary--text">We all know and love</p>
+        <p class="subheading secondary--text">We all know and love</p>
 
         <a href="#" class="subheading text-none primary--text">
           See more

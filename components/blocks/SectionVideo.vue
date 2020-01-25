@@ -2,7 +2,7 @@
   <div class="my-5">
     <H2 title="Latest Video" />
     <div class="mb-3 d-flex justify-space-between">
-      <p class="subheading mb-0 secondary--text">Watch and learn, ladies</p>
+      <p class="subheading secondary--text">Watch and learn, ladies</p>
 
       <a href="#" class="subheading text-none primary--text">
         See more

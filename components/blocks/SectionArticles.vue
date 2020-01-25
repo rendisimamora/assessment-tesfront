@@ -2,7 +2,7 @@
   <div>
     <H2 title="Latest Articles" />
     <div class="mb-3 d-flex justify-space-between">
-      <p class="subheading mb-0 secondary--text">Unravel more beauty</p>
+      <p class="subheading secondary--text">Unravel more beauty</p>
 
       <a href="#" class="subheading text-none primary--text">
         See more

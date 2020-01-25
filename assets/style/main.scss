@@ -64,6 +64,19 @@
 // End Social Media
 
 // Custom Variable
+p {
+  margin-bottom: 0px !important;
+}
+.v-input__slot {
+  box-shadow: none !important;
+}
+
+.v-rating {
+  .v-icon {
+    padding: 0px !important;
+    font-size: 18px !important;
+  }
+}
 
 .position {
   &-relative {
@@ -103,7 +116,7 @@
 }
 
 .frame {
-  width: 970px;
+  max-width: 970px;
   display: block;
   margin: auto;
   &-tp {

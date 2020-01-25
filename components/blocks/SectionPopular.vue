@@ -2,7 +2,7 @@
   <div class="my-5">
     <H2 title="Popular Groups" />
     <div class="mb-3 d-flex justify-space-between">
-      <p class="subheading mb-0 secondary--text">Where the beauty TALK are</p>
+      <p class="subheading secondary--text">Where the beauty TALK are</p>
 
       <a href="#" class="subheading text-none primary--text">
         See more
