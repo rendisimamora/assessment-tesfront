@@ -1,7 +1,14 @@
 <template>
-  <div>
-    <h2>Latest Video</h2>
-    <p>Watch and learn, ladies</p>
+  <div class="my-5">
+    <H2 title="Latest Video" />
+    <div class="mb-3 d-flex justify-space-between">
+      <p class="subheading mb-0 secondary--text">Watch and learn, ladies</p>
+
+      <a href="#" class="subheading text-none primary--text">
+        See more
+        <v-icon class="icon primary--text">keyboard_arrow_right</v-icon>
+      </a>
+    </div>
     <v-layout row wrap>
       <v-flex xs12 sm8>
         <iframe
