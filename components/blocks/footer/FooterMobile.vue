@@ -4,49 +4,25 @@
       <div class="text-center">
         <!-- Navbar -->
         <ul class="footer-nav d-flex justify-center pl-0 ma-1">
-          <li class="footer-nav-item">
+          <li class="footer-nav-item" v-for="(item, i) in itemsNav.home">
+            >
             <a href="#" class="black--text text-none font-weight-bold pa-2"
-              >About Us
-            </a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="black--text text-none font-weight-bold pa-2"
-              >Feedback
-            </a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="black--text text-none font-weight-bold pa-2"
-              >Contact
+              >{{ item.title }}
             </a>
           </li>
         </ul>
         <ul class="footer-nav d-flex justify-center pl-0 ma-1">
-          <li class="footer-nav-item">
-            <a href="#" class="black--text text-none font-weight-bold pa-2"
-              >Terms & Conditions</a
-            >
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="black--text text-none font-weight-bold pa-2"
-              >Privacy Policy</a
-            >
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="black--text text-none font-weight-bold pa-2"
-              >Help</a
-            >
+          <li class="footer-nav-item" v-for="(item, i) in itemsNav.terms">
+            <a href="#" class="black--text text-none font-weight-bold pa-2">{{
+              item.title
+            }}</a>
           </li>
         </ul>
         <ul class="footer-nav d-flex justify-center pl-0 ma-1">
-          <li class="footer-nav-item">
-            <a href="#" class="black--text text-none font-weight-bold pa-2"
-              >Awards</a
-            >
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="black--text text-none font-weight-bold pa-2"
-              >Newsletter</a
-            >
+          <li class="footer-nav-item" v-for="(item, i) in itemsNav.terms">
+            <a href="#" class="black--text text-none font-weight-bold pa-2">{{
+              item.title
+            }}</a>
           </li>
         </ul>
         <!-- End Nav -->
@@ -57,20 +33,18 @@
         </p>
         <div class="d-flex justify-center">
           <img
+            v-for="(item, i) in itemsStore"
+            :key="i"
             class="image-store mr-2"
-            src="https://s3-ap-southeast-1.amazonaws.com/assets.femaledaily.com/fdn-talk/assets/btn_appstore.png"
-            alt="playstore"
-          />
-          <img
-            class="image-store"
-            src="https://s3-ap-southeast-1.amazonaws.com/assets.femaledaily.com/fdn-talk/assets/btn_playstore.png"
-            alt="appstore"
+            :src="item.image"
+            :alt="item.title"
           />
         </div>
+
         <!-- End Download-->
 
         <!-- Footer Logo -->
-        <div class="footer__logo my-5">
+        <div class="my-5">
           <div class="footer__logo">
             <Logo />
           </div>
@@ -84,27 +58,11 @@
         <!-- Footer Social -->
         <div class="footer__social">
           <a
-            href="https://www.facebook.com/FemaleDailyNetwork/"
+            v-for="(item, i) in itemsSocial"
+            :key="i"
+            :href="item.link"
             target="_blank"
-            class="icon-facebook text-none white--text mr-2"
-          >
-          </a>
-          <a
-            href="https://twitter.com/femaledaily"
-            class="icon-twitter text-none white--text mr-2"
-            target="_blank"
-          >
-          </a>
-          <a
-            href="https://www.instagram.com/femaledailynetwork/"
-            target="_blank"
-            class="icon-instagram text-none white--text mr-2"
-          >
-          </a>
-          <a
-            href="https://www.youtube.com/user/FemaleDailyNetwork"
-            target="_blank"
-            class="icon-youtube text-none white--text mr-2"
+            :class="item.className + ` text-none white--text mr-2`"
           >
           </a>
         </div>
@@ -113,6 +71,27 @@
     </v-container>
   </div>
 </template>
+
+<script>
+import {
+  NAV_HOME,
+  NAV_TERMS,
+  NAV_ABOUT,
+  ITEMS_STORE,
+  ITEMS_SOCIAL
+} from "@/data/footer";
+export default {
+  data: () => ({
+    itemsNav: {
+      home: NAV_HOME,
+      terms: NAV_TERMS,
+      about: NAV_ABOUT
+    },
+    itemsStore: ITEMS_STORE,
+    itemsSocial: ITEMS_SOCIAL
+  })
+};
+</script>
 
 <style lang="scss" scoped>
 $color-grey: #e0e0e0;
@@ -129,6 +108,8 @@ $color-grey: #e0e0e0;
     }
   }
   &__logo {
+    display: block;
+    margin: auto;
     width: 150px;
   }
 }

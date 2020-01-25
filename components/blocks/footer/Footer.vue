@@ -4,53 +4,28 @@
       <v-layout row wrap>
         <v-flex xs12 md3>
           <ul class="footer-nav">
-            <li class="footer-nav-item">
+            <li class="footer-nav-item" v-for="(item, i) in itemsNav.home">
               <a href="#" class="black--text text-none font-weight-bold"
-                >About Us
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a href="#" class="black--text text-none font-weight-bold"
-                >Feedback
-              </a>
-            </li>
-            <li class="footer-nav-item">
-              <a href="#" class="black--text text-none font-weight-bold"
-                >Contact
+                >{{ item.title }}
               </a>
             </li>
           </ul>
         </v-flex>
         <v-flex xs12 md3>
           <ul class="footer-nav">
-            <li class="footer-nav-item">
-              <a href="#" class="black--text text-none font-weight-bold"
-                >Terms & Conditions</a
-              >
-            </li>
-            <li class="footer-nav-item">
-              <a href="#" class="black--text text-none font-weight-bold"
-                >Privacy Policy</a
-              >
-            </li>
-            <li class="footer-nav-item">
-              <a href="#" class="black--text text-none font-weight-bold"
-                >Help</a
-              >
+            <li class="footer-nav-item" v-for="(item, i) in itemsNav.terms">
+              <a href="#" class="black--text text-none font-weight-bold">{{
+                item.title
+              }}</a>
             </li>
           </ul>
         </v-flex>
         <v-flex xs12 md3>
-          <ul class="footer-nav">
+          <ul class="footer-nav" v-for="(item, i) in itemsNav.terms">
             <li class="footer-nav-item">
-              <a href="#" class="black--text text-none font-weight-bold"
-                >Awards</a
-              >
-            </li>
-            <li class="footer-nav-item">
-              <a href="#" class="black--text text-none font-weight-bold"
-                >Newsletter</a
-              >
+              <a href="#" class="black--text text-none font-weight-bold">{{
+                item.title
+              }}</a>
             </li>
           </ul>
         </v-flex>
@@ -58,22 +33,13 @@
           <p class="font-weight-bold primary--text">
             Download Our Mobile App
           </p>
-          <!--<div class="d-flex justify-space between">
-           
-          </div>-->
+
           <v-layout wrap>
-            <v-flex xs3 md6>
+            <v-flex xs3 md6 v-for="(item, i) in itemsStore" :key="i">
               <img
                 class="image-store mr-5"
-                src="https://s3-ap-southeast-1.amazonaws.com/assets.femaledaily.com/fdn-talk/assets/btn_appstore.png"
-                alt="playstore"
-              />
-            </v-flex>
-            <v-flex xs3 md6>
-              <img
-                class="image-store"
-                src="https://s3-ap-southeast-1.amazonaws.com/assets.femaledaily.com/fdn-talk/assets/btn_playstore.png"
-                alt="appstore"
+                :src="item.image"
+                :alt="item.title"
               />
             </v-flex>
           </v-layout>
@@ -93,27 +59,11 @@
         </v-flex>
         <v-flex xs12 md3>
           <a
-            href="https://www.facebook.com/FemaleDailyNetwork/"
+            v-for="(item, i) in itemsSocial"
+            :key="i"
+            :href="item.link"
             target="_blank"
-            class="icon-facebook text-none white--text mr-2"
-          >
-          </a>
-          <a
-            href="https://twitter.com/femaledaily"
-            class="icon-twitter text-none white--text mr-2"
-            target="_blank"
-          >
-          </a>
-          <a
-            href="https://www.instagram.com/femaledailynetwork/"
-            target="_blank"
-            class="icon-instagram text-none white--text mr-2"
-          >
-          </a>
-          <a
-            href="https://www.youtube.com/user/FemaleDailyNetwork"
-            target="_blank"
-            class="icon-youtube text-none white--text mr-2"
+            :class="item.className + ` text-none white--text mr-2`"
           >
           </a>
         </v-flex>
@@ -122,6 +72,27 @@
     </v-container>
   </div>
 </template>
+
+<script>
+import {
+  NAV_HOME,
+  NAV_TERMS,
+  NAV_ABOUT,
+  ITEMS_STORE,
+  ITEMS_SOCIAL
+} from "@/data/footer";
+export default {
+  data: () => ({
+    itemsNav: {
+      home: NAV_HOME,
+      terms: NAV_TERMS,
+      about: NAV_ABOUT
+    },
+    itemsStore: ITEMS_STORE,
+    itemsSocial: ITEMS_SOCIAL
+  })
+};
+</script>
 
 <style lang="scss" scoped>
 $color-grey: #e0e0e0;
