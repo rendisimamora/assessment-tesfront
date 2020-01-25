@@ -9,8 +9,40 @@
         <v-icon class="icon primary--text">keyboard_arrow_right</v-icon>
       </a>
     </div>
-    <v-layout row wrap>
-      <v-flex xs12 sm8>
+    <div class="section-desktop">
+      <v-layout row wrap>
+        <v-flex xs12 sm8>
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/gThsRmIr524"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </v-flex>
+        <v-flex xs12 sm4>
+          <iframe
+            width="100%"
+            height="200"
+            src="https://www.youtube.com/embed/X7rWF-q0Ci4"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="100%"
+            height="200"
+            src="https://www.youtube.com/embed/a9RA5r22Gsc"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </v-flex>
+      </v-layout>
+    </div>
+    <div class="section-mobile">
+      <flickity ref="flickity" :options="flickityOptions">
         <iframe
           width="100%"
           height="400"
@@ -19,11 +51,10 @@
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </v-flex>
-      <v-flex xs12 sm4>
+
         <iframe
           width="100%"
-          height="200"
+          height="400"
           src="https://www.youtube.com/embed/X7rWF-q0Ci4"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -31,13 +62,50 @@
         ></iframe>
         <iframe
           width="100%"
-          height="200"
+          height="400"
           src="https://www.youtube.com/embed/a9RA5r22Gsc"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </v-flex>
-    </v-layout>
+      </flickity>
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    flickityOptions: {
+      prevNextButtons: false,
+      pageDots: true,
+      draggable: true,
+      freeScroll: true
+    }
+  }),
+  methods: {
+    next() {
+      this.$refs.flickity.next();
+    },
+
+    previous() {
+      this.$refs.flickity.previous();
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.section {
+  &-desktop {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  &-mobile {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+</style>
