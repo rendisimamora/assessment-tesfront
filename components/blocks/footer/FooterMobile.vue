@@ -5,7 +5,6 @@
         <!-- Navbar -->
         <ul class="footer-nav d-flex justify-center pl-0 ma-1">
           <li class="footer-nav-item" v-for="(item, i) in itemsNav.home">
-            >
             <a href="#" class="black--text text-none font-weight-bold pa-2"
               >{{ item.title }}
             </a>
