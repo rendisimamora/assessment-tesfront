@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="female-app">
+    <SectionInfo />
     <v-container grid-list-xl>
       <SectionArticles :items="items.articles" />
     </v-container>
-    <SectionInfo />
     <v-container grid-list-xl>
       <SectionPopular />
       <SectionVideo />
@@ -45,3 +45,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.female-app {
+  padding-top: 120px;
+}
+</style>

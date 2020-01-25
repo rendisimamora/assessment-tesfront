@@ -1,47 +1,53 @@
 <template>
   <div class="banner">
-    <v-container grid-list-xl>
-      <div class="banner__card">
-        <div class="banner__card-item ">
-          <H2
-            title="Psst! We give product matches that will be perfect for you!"
-          />
-          <p class="text mt-2">
-            They will fit your skin, hair, body, AND they solve your beauty
-            concerns at the same time. Sign up and complete your Beauty ID now!
-          </p>
-          <v-btn
-            color="primary white--text"
-            class="btn d-flex align-self-end box-shadow text-capitalize"
-            tile
-            large
-            >Log in / Register</v-btn
-          >
+    <div class="banner__image">
+      <v-container grid-list-xl>
+        <div class="banner__card">
+          <div class="banner__card-item ">
+            <H2
+              title="Psst! We give product matches that will be perfect for you!"
+            />
+            <p class="text mt-2">
+              They will fit your skin, hair, body, AND they solve your beauty
+              concerns at the same time. Sign up and complete your Beauty ID
+              now!
+            </p>
+            <v-btn
+              color="primary white--text"
+              class="btn d-flex align-self-end box-shadow text-capitalize"
+              tile
+              large
+              >Log in / Register</v-btn
+            >
+          </div>
         </div>
-      </div>
-    </v-container>
+      </v-container>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .banner {
-  background: url("https://s3-ap-southeast-1.amazonaws.com/assets.femaledaily.com/web-assets/banner_matches_visitor.png")
-    no-repeat;
-  background-position: center;
-  height: 405px;
-  width: 100%;
-  margin: 0 0 60px 0;
-  @media (max-width: 800px) {
-    background: url("https://s3-ap-southeast-1.amazonaws.com/assets.femaledaily.com/web-assets/banner_matches_visitor_mobile.png")
+  overflow: hidden;
+  &__image {
+    background: url("https://s3-ap-southeast-1.amazonaws.com/assets.femaledaily.com/web-assets/banner_matches_visitor.png")
       no-repeat;
-    background-size: 320px 349px;
-    height: 349px;
-    background-color: #fddae0;
-    margin: 0 0 24px 0;
-    padding: 16px 16px 0 16px;
-    background-position: right;
-    @media (min-width: 320px) and (max-width: 480px) {
-      width: 500px;
+    background-position: center;
+    height: 405px;
+    width: 100%;
+    margin: 0 0 60px 0;
+    @media (max-width: 800px) {
+      background: url("https://s3-ap-southeast-1.amazonaws.com/assets.femaledaily.com/web-assets/banner_matches_visitor_mobile.png")
+        no-repeat;
+      background-size: 320px 349px;
+      height: 349px;
+      background-color: #fddae0;
+      margin: 0 0 24px 0;
+      padding: 16px 16px 0 16px;
+      background-position: right;
+      @media (min-width: 320px) and (max-width: 480px) {
+        width: 500px;
+      }
     }
   }
   &__card {
