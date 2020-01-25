@@ -1,5 +1,4 @@
 require("dotenv").config();
-import colors from "vuetify/es5/util/colors";
 
 module.exports = {
   mode: "universal",
@@ -18,7 +17,19 @@ module.exports = {
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap"
+      },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined"
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -39,7 +50,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/axios"],
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/axios"],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -50,13 +61,9 @@ module.exports = {
       light: true,
       themes: {
         light: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          primary: process.env.PRIMARY,
+          accent: process.env.ACCENT,
+          secondary: process.env.SECONDARY
         }
       }
     }
