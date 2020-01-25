@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="my-5">
     <H2 title="Popular Groups" />
     <div class="mb-3 d-flex justify-space-between">
       <p class="subheading mb-0 secondary--text">Where the beauty TALK are</p>
@@ -14,6 +14,7 @@
         <div class="d-flex ml-1 mr-5">
           <CardPopularGroup
             v-for="(item, i) in items"
+            :key="i"
             :avatar="item.avatar"
             :name="item.name"
             :description="item.description"

@@ -13,8 +13,8 @@
 
       <div class="pb-5">
         <v-layout row wrao>
-          <v-flex xs4 md2 v-for="(item, i) in items">
-            <CardBrands :key="i" :image="item.image" :title="item.title" />
+          <v-flex xs4 md2 v-for="(item, i) in items" :key="i">
+            <CardBrands :image="item.image" :title="item.title" />
           </v-flex>
         </v-layout>
       </div>
