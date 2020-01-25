@@ -1,22 +1,26 @@
 <template>
   <div>
-    <SectionArticles :items="items.articles" />
-
-    <SectionPopular />
-    <SectionVideo />
-    <SectionBrands />
+    <v-container grid-list-xl>
+      <SectionArticles :items="items.articles" />
+    </v-container>
+    <SectionInfo />
+    <v-container grid-list-xl>
+      <SectionPopular />
+      <SectionVideo />
+      <SectionBrands />
+    </v-container>
   </div>
 </template>
 
 <script>
 import SectionArticles from "@/components/blocks/SectionArticles";
+import SectionInfo from "@/components/blocks/SectionInfo";
 import SectionPopular from "@/components/blocks/SectionPopular";
 import SectionVideo from "@/components/blocks/SectionVideo";
 import SectionBrands from "@/components/blocks/SectionBrands";
 export default {
   async asyncData({ app }) {
     let res = await app.$api.fdn.get();
-    console.log("DATA___", res);
     let items = {
       articles: res["latest articles"]
     };
@@ -28,6 +32,7 @@ export default {
 
   components: {
     SectionArticles,
+    SectionInfo,
     SectionPopular,
     SectionVideo,
     SectionBrands

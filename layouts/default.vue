@@ -1,9 +1,7 @@
 <template>
   <v-app light>
     <v-content>
-      <v-container grid-list-xl>
-        <nuxt />
-      </v-container>
+      <nuxt />
       <Footer />
       <FooterMobile />
     </v-content>
