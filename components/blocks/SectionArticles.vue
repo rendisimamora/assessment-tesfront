@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="my-5">
     <H2 title="Latest Articles" />
     <div class="mb-3 d-flex justify-space-between">
       <p class="subheading mb-0 secondary--text">Unravel more beauty</p>
