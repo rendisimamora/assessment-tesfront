@@ -1,4 +1,88 @@
-// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-//
-// The variables you want to modify
-// $font-size-root: 20px;
+// Cdn Font Icon
+@font-face {
+  font-family: "icoMoon";
+  src: url(//raw.githubusercontent.com/Keyamoon/IcoMoon-Free/master/Font/IcoMoon-Free.ttf)
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "IcoMoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// End Cdn Font
+
+// Font Family
+
+.font-montserrat {
+  font-family: montserrat;
+}
+
+.font-roboto {
+  font-family: Roboto;
+}
+
+// End Font Family
+
+// Social Media Icon
+.icon {
+  &-facebook:before {
+    content: "\ea90";
+    background: #3b5998;
+    padding: 10px;
+    border-radius: 100%;
+  }
+  &-twitter:before {
+    content: "\ea96";
+    background: #55acee;
+    padding: 10px;
+    border-radius: 100%;
+  }
+  &-instagram:before {
+    content: "\ea92";
+    background: #428bca;
+    padding: 10px;
+    border-radius: 100%;
+  }
+  &-youtube:before {
+    content: "\ea9d";
+    background: #d42428;
+    padding: 10px;
+    border-radius: 100%;
+  }
+}
+
+// End Social Media
+
+// Custom Variable
+
+.p {
+  &-relative {
+    position: relative;
+  }
+  &-absolute {
+    position: absolute;
+  }
+}
+
+.text-none {
+  text-decoration: none;
+}
+
+.shadow {
+  &-none {
+    box-shadow: none;
+  }
+}
+
+// End Custom
