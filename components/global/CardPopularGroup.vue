@@ -2,7 +2,7 @@
   <div class="card pa-5 mr-5">
     <div class="font-montserrat text-center">
       <a href="#" class="card__anchor">
-        <img class="image" :src="avatar" :alt="name" />
+        <img class="image image-circle" :src="avatar" :alt="name" />
       </a>
       <div class="card__text">
         <h2 class="card__text-name">{{ name }}</h2>

@@ -64,9 +64,6 @@ export default {
   object-fit: cover;
   width: 50px;
   height: 50px;
-  &-circle {
-    border-radius: 100%;
-  }
 }
 
 .card {
