@@ -56,14 +56,15 @@ module.exports = {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ["~/assets/variables.scss"],
+    customVariables: ["@/assets/variables.scss"],
     theme: {
       light: true,
       themes: {
         light: {
           primary: process.env.PRIMARY,
           accent: process.env.ACCENT,
-          secondary: process.env.SECONDARY
+          secondary: process.env.SECONDARY,
+          info: process.env.INFO
         }
       }
     }
