@@ -72,13 +72,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .v-text-field {
   padding: 0px;
 }
-.v-input__slot {
-  box-shadow: none !important;
-}
+
 .navbar {
   position: fixed;
   width: 100%;
