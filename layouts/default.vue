@@ -5,6 +5,7 @@
       <nuxt />
       <Footer />
       <FooterMobile />
+      <BottomFrame />
     </v-content>
   </v-app>
 </template>
