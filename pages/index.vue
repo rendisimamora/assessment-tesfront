@@ -1,14 +1,16 @@
 <template>
   <div class="female-app">
-    <TopFrame />
-    <BillboardFrame />
+    <v-container grid-list-xl>
+      <TopFrame />
+      <BillboardFrame />
 
-    <SectionEditor :items="items.editors" />
+      <SectionEditor :items="items.editors" />
+    </v-container>
     <SectionInfo />
 
-    <HorizontalFrame />
-
     <v-container grid-list-xl>
+      <HorizontalFrame />
+      <SectionReviews :items="items.reviews" />
       <SectionArticles :items="items.articles" />
       <SectionPopular />
       <SectionVideo />
@@ -20,6 +22,7 @@
 <script>
 import SectionEditor from "@/components/blocks/SectionEditor";
 import SectionInfo from "@/components/blocks/SectionInfo";
+import SectionReviews from "@/components/blocks/SectionReviews";
 import SectionArticles from "@/components/blocks/SectionArticles";
 import SectionPopular from "@/components/blocks/SectionPopular";
 import SectionVideo from "@/components/blocks/SectionVideo";
@@ -29,7 +32,8 @@ export default {
     let res = await app.$api.fdn.get();
     let items = {
       editors: res["editor's choice"],
-      articles: res["latest articles"]
+      articles: res["latest articles"],
+      reviews: res["latest review"]
     };
 
     return {
@@ -40,6 +44,7 @@ export default {
   components: {
     SectionEditor,
     SectionInfo,
+    SectionReviews,
     SectionArticles,
     SectionPopular,
     SectionVideo,
