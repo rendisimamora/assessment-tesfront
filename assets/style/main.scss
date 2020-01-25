@@ -102,4 +102,16 @@
   overflow-y: auto;
 }
 
+.frame {
+  width: 970px;
+  display: block;
+  margin: auto;
+  &-tp {
+    height: 50px;
+  }
+  &-billboard {
+    height: 250px;
+  }
+}
+
 // End Custom

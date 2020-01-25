@@ -1,10 +1,14 @@
 <template>
   <div class="female-app">
+    <TopFrame />
+    <BillboardFrame />
+
     <SectionInfo />
+
+    <HorizontalFrame />
+
     <v-container grid-list-xl>
       <SectionArticles :items="items.articles" />
-    </v-container>
-    <v-container grid-list-xl>
       <SectionPopular />
       <SectionVideo />
       <SectionBrands />
