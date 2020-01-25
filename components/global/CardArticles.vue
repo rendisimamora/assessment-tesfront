@@ -1,11 +1,11 @@
 <template>
   <v-layout row wrap>
     <v-flex xs6 md12>
-      <div class="item ">
-        <a href="#" class="text-none">
-          <div class="item__thumbnail position-relative">
+      <div class="card">
+        <a href="#" class="card__anchor text-none">
+          <div class="card__image position-relative">
             <v-btn
-              class="position-absolute shadow-none "
+              class="position-absolute shadow-none font-weight-bold"
               color="white primary--text"
               x-small
               tile
@@ -50,13 +50,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.item {
-  &__thumbnail {
+.card {
+  &__image {
     height: 180px;
     border-radius: 8px;
     overflow: hidden;
     @media (min-width: 320px) and (max-width: 480px) {
       height: auto;
+    }
+  }
+  &__anchor {
+    &:hover {
+      .card__image {
+        transition: 0.3s;
+        opacity: 0.8;
+      }
     }
   }
 }

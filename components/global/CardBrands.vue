@@ -1,6 +1,8 @@
 <template>
-  <div class="item__thumbnail">
-    <img class="image" :src="image" :alt="title" />
+  <div class="card">
+    <a href="#" class="card__anchor">
+      <img class="card__image" :src="image" :alt="title" />
+    </a>
   </div>
 </template>
 
@@ -18,16 +20,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.item {
-  &__thumbnail {
-    width: 100%;
-    height: 100px;
-    overflow: hidden;
-  }
-}
-.image {
+.card {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: 100px;
+  overflow: hidden;
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &__anchor {
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.8;
+    }
+  }
 }
 </style>

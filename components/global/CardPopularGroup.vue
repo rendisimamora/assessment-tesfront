@@ -1,7 +1,7 @@
 <template>
   <div class="card pa-5 mr-5">
     <div class="font-montserrat text-center">
-      <a href="#" class="card-image">
+      <a href="#" class="card__anchor">
         <img class="image" :src="avatar" :alt="name" />
       </a>
       <div class="card__text">
@@ -74,7 +74,7 @@ export default {
     }
   }
 
-  &-image {
+  &__anchor {
     &:hover {
       transition: 0.3s;
       opacity: 0.8;
