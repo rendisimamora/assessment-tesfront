@@ -10,7 +10,6 @@
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: "IcoMoon" !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -66,12 +65,12 @@
 
 // Custom Variable
 
-.p {
+.position {
   &-relative {
-    position: relative;
+    position: relative !important;
   }
   &-absolute {
-    position: absolute;
+    position: absolute !important;
   }
 }
 
@@ -79,10 +78,28 @@
   text-decoration: none;
 }
 
+.subheading {
+  font-size: 20px;
+  font-weight: 400;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: 14px;
+  }
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 34px;
+}
+
 .shadow {
   &-none {
-    box-shadow: none;
+    box-shadow: none !important;
   }
+}
+
+.overflow-auto-y {
+  overflow-y: auto;
 }
 
 // End Custom

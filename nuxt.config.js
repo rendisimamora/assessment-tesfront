@@ -38,7 +38,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ["@/assets/style/main.scss"],
   /*
    ** Plugins to load before mounting the App
    */
@@ -56,7 +56,6 @@ module.exports = {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ["@/assets/variables.scss"],
     theme: {
       light: true,
       themes: {
