@@ -4,6 +4,8 @@
 
 Single webpage frontend developer using NuxtJS Server side rendering. 
 
+[Demo Projects](https://female-daily-assessments.herokuapp.com/#)
+
 ## Tech Stack
 * [NuxtJs - Javascript Framework](https://nuxtjs.org/)
 * [Vuetify - CSS Framework](https://vuetifyjs.com/en/getting-started/quick-start)
