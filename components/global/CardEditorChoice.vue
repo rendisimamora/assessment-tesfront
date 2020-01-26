@@ -23,7 +23,7 @@
       <div class="card__rating mb-3 d-flex align-center">
         <p class="font-weight-bold mr-1">{{ productRating }}</p>
         <v-rating
-          class="mr-1"
+          class="mr-1 d-flex"
           :empty-icon="'mdi-star'"
           :background-color="'secondary'"
           v-model="productRating"
@@ -81,7 +81,11 @@ export default {
     flex-flow: column;
     min-height: 351px;
     &-image {
-      width: 100%;
+      width: 125px;
+      height: 125px;
+      object-fit: cover;
+      display: block;
+      margin: auto;
       &:hover {
         transition: 0.3s;
         opacity: 0.8;
