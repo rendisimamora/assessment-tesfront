@@ -32,23 +32,45 @@
 </template>
 
 <script>
+let Flickity = {};
+if (process.browser) {
+  Flickity = require("flickity");
+}
 export default {
   props: {
     items: Array
   },
 
-  data() {
-    return {
-      flickityOptions: {
-        freeScroll: true,
-        groupCells: true,
-        contain: true,
-        prevNextButtons: false,
-        pageDots: true,
-        groupCells: 1,
-        fullscreen: true
-      }
+  data: () => ({
+    flickityOptions: {
+      freeScroll: true,
+      groupCells: true,
+      contain: true,
+      prevNextButtons: false,
+      pageDots: true,
+      groupCells: 1,
+      fullscreen: true
+    }
+  }),
+
+  created() {
+    // here i create my options variable
+    this.flickityOptions = {
+      freeScroll: true,
+      groupCells: true,
+      contain: true,
+      prevNextButtons: false,
+      pageDots: true,
+      groupCells: 1,
+      fullscreen: true
     };
+  },
+
+  mounted() {
+    const carousel = this.$refs.flickycarous;
+    if (carousel) {
+      this.flick = new Flickity(carousel, this.flickityOptions);
+    }
   }
 };
 </script>
