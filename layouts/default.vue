@@ -11,12 +11,12 @@
 </template>
 
 <script>
-import Navbar from "@/components/blocks/navbar/Navbar";
+import Nav from "@/components/blocks/navbar/Nav";
 import Footer from "@/components/blocks/footer/Footer";
 import FooterMobile from "@/components/blocks/footer/FooterMobile";
 export default {
   components: {
-    Navbar,
+    Nav,
     Footer,
     FooterMobile
   }
