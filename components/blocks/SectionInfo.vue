@@ -63,7 +63,7 @@
       align-items: baseline;
       @media (min-width: 1264px) {
         margin: 10px 0 0 135px;
-        padding-top: 50px;
+        padding-top: 30px;
       }
       @media (min-wdith: 800px) {
         padding-top: 40px;
@@ -81,5 +81,6 @@
 }
 .btn {
   width: 200px;
+  border-radius: 4px;
 }
 </style>
