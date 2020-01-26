@@ -5,7 +5,7 @@
 Single webpage frontend developer using NuxtJS Server side rendering. 
 
 ## Tech Stack
-* [NuxtJs - Javascript Network](https://nuxtjs.org/)
+* [NuxtJs - Javascript Framework](https://nuxtjs.org/)
 * [Vuetify - CSS Framework](https://vuetifyjs.com/en/getting-started/quick-start)
 * [SCSS - SCSS Preprocessor](https://sass-lang.com/documentation/syntax)
 * [Axios - Http Request](https://axios.nuxtjs.org/)
