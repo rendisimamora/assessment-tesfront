@@ -11,7 +11,7 @@
           <p><v-icon>list</v-icon>{{ list }}</p>
           <p><v-icon>insert_comment</v-icon>{{ comments }}</p>
         </div>
-        <p class="card__text-description ">
+        <p class="card__text-description my-5">
           {{ description }}
         </p>
       </div>
