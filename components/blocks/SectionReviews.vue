@@ -13,7 +13,29 @@
     </div>
     <div class="item__list">
       <no-ssr>
-        <flickity class="flickity" ref="flickity" :options="flickityOptions">
+        <flickity
+          class="flickity flickity--mobile"
+          ref="flickity"
+          :options="flickityMobileOptions"
+        >
+          <CardReviews
+            v-for="(item, i) in items"
+            :key="i"
+            :productImage="item.product.image"
+            :productName="item.product.name"
+            :productDescription="item.product.desc"
+            :userName="item.user"
+            :userProfile="item.profile"
+            :star="item.star"
+            :comment="item.comment"
+          />
+        </flickity>
+
+        <flickity
+          class="flickity flickity--desktop"
+          ref="flickity"
+          :options="flickityDesktopOptions"
+        >
           <CardReviews
             v-for="(item, i) in items"
             :key="i"
@@ -39,7 +61,16 @@ export default {
   },
 
   data: () => ({
-    flickityOptions: {
+    flickityMobileOptions: {
+      contain: true,
+      prevNextButtons: false,
+      pageDots: true,
+      draggable: true,
+      fullscreen: true,
+      groupCells: 1
+    },
+
+    flickityDesktopOptions: {
       contain: true,
       prevNextButtons: false,
       pageDots: true,
@@ -54,17 +85,29 @@ export default {
 <style lang="scss" scoped>
 .flickity {
   width: 100%;
+  &--desktop {
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+  &--mobile {
+    @media (min-width: 501px) {
+      display: none;
+    }
+  }
 }
 .item {
   &__list {
     width: 100%;
-    display: flex;
+    @media (min-width: 900px) {
+      display: flex;
+    }
   }
 }
 
 .is-selected {
   width: 49%;
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     width: 100%;
   }
 }

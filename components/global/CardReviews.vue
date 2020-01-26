@@ -62,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 .card {
   width: 49%;
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     width: 100%;
   }
   &__reviews {
