@@ -10,9 +10,10 @@
         </div>
       </div>
       <div class="navbar__search mr-5">
-        <div class="form__group mt-1 d-flex ">
+        <div class="form__group mt-3 d-flex ">
           <v-icon class="pl-2">search</v-icon>
           <v-text-field
+            class="body-2"
             placeholder="search products, articles, topics, brands, etc"
             solo
             hide-details
@@ -28,7 +29,7 @@
     <div class="navbar__category py-2 d-flex align-center justify-center">
       <ul class="nav">
         <li
-          class="nav-item font-weight-bold mr-5"
+          class="body-2 nav-item font-weight-bold mr-5"
           v-for="(item, i) in items"
           :key="i"
         >
@@ -82,6 +83,9 @@ export default {
   width: 100%;
   background: #fff;
   z-index: 99;
+  @media (max-width: 959px) {
+    display: none;
+  }
   &-left {
     width: 250px;
     flex-shrink: 0;

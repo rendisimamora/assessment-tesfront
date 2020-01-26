@@ -10,8 +10,8 @@
 
     <v-container grid-list-xl>
       <HorizontalFrame />
-      <SectionReviews :items="items.reviews" />
       <SectionArticles :items="items.articles" />
+      <SectionReviews :items="items.reviews" />
       <SectionPopular />
       <SectionVideo />
       <SectionTrending :items="items.reviews" />
@@ -65,5 +65,8 @@ export default {
 <style lang="scss" scoped>
 .female-app {
   padding-top: 120px;
+  @media (max-width: 960px) {
+    padding-top: 80px;
+  }
 }
 </style>
