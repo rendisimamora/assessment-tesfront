@@ -1,17 +1,17 @@
 <template>
-  <div class="my-5 d-flex justify-space-between">
-    <div class="item">
-      <H2 title="Latest Reviews" />
-      <div class="mb-3 d-flex justify-space-between">
-        <p class="subheading secondary--text">
-          So you can make better purchase decision
-        </p>
+  <div class="my-5">
+    <H2 title="Latest Reviews" />
+    <div class="mb-3 d-flex justify-space-between">
+      <p class="subheading secondary--text">
+        So you can make better purchase decision
+      </p>
 
-        <a href="#" class="subheading text-none primary--text">
-          See more
-          <v-icon class="icon primary--text">keyboard_arrow_right</v-icon>
-        </a>
-      </div>
+      <a href="#" class="subheading font-weight-medium text-none primary--text">
+        See more
+        <v-icon class="icon primary--text">keyboard_arrow_right</v-icon>
+      </a>
+    </div>
+    <div class="item__list">
       <no-ssr>
         <flickity class="flickity" ref="flickity" :options="flickityOptions">
           <CardReviews
@@ -27,6 +27,7 @@
           />
         </flickity>
       </no-ssr>
+      <ReviewsFrame />
     </div>
   </div>
 </template>
@@ -39,26 +40,30 @@ export default {
 
   data: () => ({
     flickityOptions: {
-      freeScroll: true,
-      groupCells: true,
       contain: true,
       prevNextButtons: false,
       pageDots: true,
       draggable: true,
-      groupCells: 1,
-      fullscreen: true
+      fullscreen: true,
+      groupCells: 2
     }
   })
 };
 </script>
 
 <style lang="scss" scoped>
-.item {
+.flickity {
   width: 100%;
+}
+.item {
+  &__list {
+    width: 100%;
+    display: flex;
+  }
 }
 
 .is-selected {
-  width: 50%;
+  width: 49%;
   @media (max-width: 600px) {
     width: 100%;
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card mx-2">
     <div class="card__reviews pa-5">
       <div class="d-flex">
         <img
@@ -61,8 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  width: 50%;
-  margin-right: 10px;
+  width: 49%;
   @media (max-width: 600px) {
     width: 100%;
   }
