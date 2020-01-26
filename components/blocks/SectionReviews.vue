@@ -44,6 +44,7 @@ export default {
       contain: true,
       prevNextButtons: false,
       pageDots: true,
+      draggable: true,
       groupCells: 1,
       fullscreen: true
     }
