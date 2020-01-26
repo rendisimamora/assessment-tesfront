@@ -1,7 +1,7 @@
 <template>
   <v-app light>
     <v-content>
-      <Navbar />
+      <Nav />
       <nuxt />
       <Footer />
       <FooterMobile />
@@ -14,6 +14,7 @@
 import Nav from "@/components/blocks/navbar/Nav";
 import Footer from "@/components/blocks/footer/Footer";
 import FooterMobile from "@/components/blocks/footer/FooterMobile";
+
 export default {
   components: {
     Nav,
