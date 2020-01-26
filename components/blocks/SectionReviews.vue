@@ -55,7 +55,7 @@ export default {
 
   created() {
     // here i create my options variable
-    this.flickityOptions = {
+    this.flickityOptionsPromos = {
       freeScroll: true,
       groupCells: true,
       contain: true,
@@ -69,7 +69,7 @@ export default {
   mounted() {
     const carousel = this.$refs.flickycarous;
     if (carousel) {
-      this.flick = new Flickity(carousel, this.flickityOptions);
+      this.flick = new Flickity(carousel, this.flickityOptionsPromos);
     }
   }
 };
