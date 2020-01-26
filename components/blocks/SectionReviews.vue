@@ -12,20 +12,21 @@
           <v-icon class="icon primary--text">keyboard_arrow_right</v-icon>
         </a>
       </div>
-
-      <flickity class="flickity" ref="flickity" :options="flickityOptions">
-        <CardReviews
-          v-for="(item, i) in items"
-          :key="i"
-          :productImage="item.product.image"
-          :productName="item.product.name"
-          :productDescription="item.product.desc"
-          :userName="item.user"
-          :userProfile="item.profile"
-          :star="item.star"
-          :comment="item.comment"
-        />
-      </flickity>
+      <no-ssr>
+        <flickity class="flickity" ref="flickity" :options="flickityOptions">
+          <CardReviews
+            v-for="(item, i) in items"
+            :key="i"
+            :productImage="item.product.image"
+            :productName="item.product.name"
+            :productDescription="item.product.desc"
+            :userName="item.user"
+            :userProfile="item.profile"
+            :star="item.star"
+            :comment="item.comment"
+          />
+        </flickity>
+      </no-ssr>
     </div>
   </div>
 </template>

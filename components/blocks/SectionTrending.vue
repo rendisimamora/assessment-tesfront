@@ -5,16 +5,18 @@
       See our weekly most reviewed products
     </p>
 
-    <flickity class="flickity" ref="flickity" :options="flickityOptions">
-      <CardProducts
-        v-for="(item, i) in items"
-        :key="i"
-        :productImage="item.image"
-        :productName="item.title"
-        :productDescription="item.description"
-        :star="item.star"
-      />
-    </flickity>
+    <no-ssr>
+      <flickity class="flickity" ref="flickity" :options="flickityOptions">
+        <CardProducts
+          v-for="(item, i) in items"
+          :key="i"
+          :productImage="item.image"
+          :productName="item.title"
+          :productDescription="item.description"
+          :star="item.star"
+        />
+      </flickity>
+    </no-ssr>
   </div>
 </template>
 
