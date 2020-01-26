@@ -27,6 +27,7 @@ export default {
       contain: true,
       prevNextButtons: false,
       pageDots: true,
+      draggable: true,
       wrapAround: true
     },
 
