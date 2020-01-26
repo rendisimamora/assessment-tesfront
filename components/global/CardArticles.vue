@@ -5,7 +5,7 @@
         <a href="#" class="card__anchor text-none">
           <div class="card__image position-relative">
             <v-btn
-              class="position-absolute shadow-none font-weight-bold"
+              class="btn position-absolute shadow-none font-weight-bold"
               color="white primary--text"
               x-small
               tile
@@ -88,5 +88,8 @@ export default {
       font-size: 12px;
     }
   }
+}
+.btn {
+  letter-spacing: 0px;
 }
 </style>
